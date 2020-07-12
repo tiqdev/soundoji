@@ -21,22 +21,19 @@ class _HomePageState extends State<HomePage> {
   uiColors _colors = new uiColors();
   List<SoundojiObj> funList;
   List<SoundojiObj> animalList;
-  String title;
 
   List<SoundojiObj> soundojis = [
     SoundojiObj(category : 'Fun' ,soundPath: 'sounds/slap.wav', iconPath: 'assets/images/slap.svg'),
     SoundojiObj(category : 'Fun' ,soundPath: 'sounds/pew.wav', iconPath: 'assets/images/pew.svg'),
     SoundojiObj(category : 'Fun' ,soundPath: 'sounds/mp5.wav', iconPath: 'assets/images/mp5.svg'),
     SoundojiObj(category : 'Fun' ,soundPath: 'sounds/arrow.mp3', iconPath: 'assets/images/arrow.svg'),
-    SoundojiObj(category : 'Fun' ,soundPath: 'sounds/slap.wav', iconPath: 'assets/images/slap.svg'),
-    SoundojiObj(category : 'Fun' ,soundPath: 'sounds/pew.wav', iconPath: 'assets/images/pew.svg'),
-    SoundojiObj(category : 'Fun' ,soundPath: 'sounds/mp5.wav', iconPath: 'assets/images/mp5.svg'),
-    SoundojiObj(category : 'Fun' ,soundPath: 'sounds/arrow.mp3', iconPath: 'assets/images/arrow.svg'),
+    SoundojiObj(category : 'Fun' ,soundPath: 'sounds/kid.mp3', iconPath: 'assets/images/baby.svg'),
     SoundojiObj(category : 'Animal' ,soundPath: 'sounds/cow.mp3', iconPath: 'assets/images/cow.svg'),
     SoundojiObj(category : 'Animal' ,soundPath: 'sounds/dog.mp3', iconPath: 'assets/images/dog.svg'),
-    SoundojiObj(category : 'Animal' ,soundPath: 'sounds/cow.mp3', iconPath: 'assets/images/cow.svg'),
-    SoundojiObj(category : 'Animal' ,soundPath: 'sounds/dog.mp3', iconPath: 'assets/images/dog.svg'),
-
+    SoundojiObj(category : 'Animal' ,soundPath: 'sounds/sheep.mp3', iconPath: 'assets/images/sheep.svg'),
+    SoundojiObj(category : 'Animal' ,soundPath: 'sounds/horse.mp3', iconPath: 'assets/images/horse.svg'),
+    SoundojiObj(category : 'Animal' ,soundPath: 'sounds/bird.mp3', iconPath: 'assets/images/bird.svg'),
+    SoundojiObj(category : 'Animal' ,soundPath: 'sounds/lion.mp3', iconPath: 'assets/images/lion.svg'),
   ];
 
   play(int index, String category) async {
@@ -54,7 +51,6 @@ class _HomePageState extends State<HomePage> {
   }
   @override
   void initState() {
-    title = 'Fun';
     funList = filterByCategory('Fun');
     animalList = filterByCategory('Animal');
     super.initState();
@@ -69,25 +65,25 @@ class _HomePageState extends State<HomePage> {
       width:  size.width,
       color: _colors.whiteGrey,
       margin: EdgeInsets.only(top: 24),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Text(
-            'Soundoji',
-            style: TextStyle(color: _colors.uiYellow, fontSize: 50),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal:12.0),
-            child: CategoryList(title: 'Fun',list: funList,playSound:play, )
-          ),
-          Padding(
-              padding: const EdgeInsets.symmetric(horizontal:12.0),
-              child: CategoryList(title: 'Animal',list: animalList,playSound:play, )
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal : 12.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Soundoji',
+                style: TextStyle(color: _colors.uiYellow, fontSize: 50),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            CategoryList(title: 'Fun',list: funList,playSound:play, ),
+            CategoryList(title: 'Animal',list: animalList,playSound:play, ),
+          ],
+        ),
       ),
     );
   }
