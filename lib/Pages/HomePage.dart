@@ -18,7 +18,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   AudioCache audioCache = new AudioCache();
-  uiColors _colors = new uiColors();
   List<SoundojiObj> funList;
   List<SoundojiObj> animalList;
 
@@ -49,6 +48,7 @@ class _HomePageState extends State<HomePage> {
   filterByCategory(String category){
     return soundojis.where((element) => element.category == category).toList();
   }
+
   @override
   void initState() {
     funList = filterByCategory('Fun');
@@ -60,26 +60,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Container(
-      height: size.height,
-      width:  size.width,
-      color: _colors.whiteGrey,
-      margin: EdgeInsets.only(top: 24),
+    return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal : 12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Soundoji',
-                style: TextStyle(color: _colors.uiYellow, fontSize: 50),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 80,),
+            CategoryList(title: 'Fun',list: funList,playSound:play, ),
+            CategoryList(title: 'Animal',list: animalList,playSound:play, ),
+            CategoryList(title: 'Fun',list: funList,playSound:play, ),
+            CategoryList(title: 'Animal',list: animalList,playSound:play, ),
+            CategoryList(title: 'Fun',list: funList,playSound:play, ),
+            CategoryList(title: 'Animal',list: animalList,playSound:play, ),
             CategoryList(title: 'Fun',list: funList,playSound:play, ),
             CategoryList(title: 'Animal',list: animalList,playSound:play, ),
           ],

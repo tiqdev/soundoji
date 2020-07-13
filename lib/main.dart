@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soundoji/Components/CustomAppBar.dart';
 import 'package:soundoji/Constants/UIColors.dart';
 import 'Pages/HomePage.dart';
 
@@ -14,6 +15,8 @@ class Soundoji extends StatelessWidget {
       title: 'Soundoji',
       theme: ThemeData(
         fontFamily: 'Bangers',
+        primaryColor: Colors.white,
+        accentColor: Colors.grey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Home(),
@@ -38,9 +41,13 @@ class _HomeState extends State<Home> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: _colors.defaultWhite,
-      body: HomePage(),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: _colors.defaultWhite,
+        body: HomePage(),
+        appBar: SoundojiBar(height: 80,),
+        extendBodyBehindAppBar: true,
+      ),
     );
   }
 }

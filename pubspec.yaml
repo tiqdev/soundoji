@@ -31,6 +31,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.7.5
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/ic_launcher.png"
+
+
 
 
 flutter:
@@ -38,7 +45,6 @@ flutter:
   assets:
     - assets/images/
     - assets/sounds/
-
 
 
   fonts:
