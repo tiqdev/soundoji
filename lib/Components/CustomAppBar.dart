@@ -3,7 +3,16 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soundoji/Constants/UIColors.dart';
+import 'package:soundoji/Pages/AboutPage.dart';
 import 'LogoTitle.dart';
+
+extension NavigationExtension on BuildContext {
+  navigateTo(Widget destination) {
+    Navigator.of(this).push(
+      MaterialPageRoute(builder: (context) => destination),
+    );
+  }
+}
 
 class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -46,12 +55,15 @@ class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
                   LogoTitle(colors: _colors),
                   Padding(
                     padding: const EdgeInsets.only(right: 8.0),
-                    child: Icon(
-                      Icons.info_outline,
-                      size: 30,
-                      color: _colors.uiYellow,
+                    child: IconButton(
+                      onPressed: () => context.navigateTo(AboutPage()),
+                      icon: Icon(
+                        Icons.info_outline,
+                        size: 30,
+                        color: _colors.uiYellow,
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
