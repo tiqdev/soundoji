@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:soundoji/Components/CustomAppBar.dart';
+import 'package:flutter/services.dart';
+
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+import 'package:soundoji/Components/SoundojiBar.dart';
 import 'package:soundoji/Constants/UIColors.dart';
 import 'Pages/HomePage.dart';
 
@@ -8,13 +11,21 @@ void main() {
 }
 
 class Soundoji extends StatelessWidget {
+  uiColors _colors = uiColors();
   @override
   Widget build(BuildContext context) {
+
+    //Status Bar and Text Color
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+        statusBarColor: _colors.defaultWhite,
+        statusBarBrightness: Brightness.dark
+    ));
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Soundoji',
       theme: ThemeData(
-        fontFamily: 'Bangers',
+        fontFamily: 'Cera',
         primaryColor: Colors.white,
         accentColor: Colors.grey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -23,7 +34,6 @@ class Soundoji extends StatelessWidget {
     );
   }
 }
-
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);

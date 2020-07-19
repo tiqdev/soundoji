@@ -1,18 +1,9 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soundoji/Constants/UIColors.dart';
 import 'package:soundoji/Pages/AboutPage.dart';
 import 'LogoTitle.dart';
-
-extension NavigationExtension on BuildContext {
-  navigateTo(Widget destination) {
-    Navigator.of(this).push(
-      MaterialPageRoute(builder: (context) => destination),
-    );
-  }
-}
 
 class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -33,7 +24,7 @@ class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
         color: Colors.transparent,
         child: FittedBox(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(12.0, 4.0, 12.0, 4.0),
+            padding: const EdgeInsets.fromLTRB(12.0, 4.0, 8.0, 4.0),
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: height - 20,
@@ -48,6 +39,7 @@ class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
                   ]),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
                     width: 50,
@@ -56,9 +48,13 @@ class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 8.0),
                     child: IconButton(
-                      onPressed: () => context.navigateTo(AboutPage()),
+                      onPressed: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => AboutPage(),),
+                        );
+                      },
                       icon: Icon(
-                        Icons.info_outline,
+                        Icons.announcement,
                         size: 30,
                         color: _colors.uiYellow,
                       ),

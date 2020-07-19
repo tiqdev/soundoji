@@ -1,4 +1,4 @@
-import 'package:bouncing_widget/bouncing_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:soundoji/Constants/UIColors.dart';
@@ -42,20 +42,21 @@ class _CategoryListState extends State<CategoryList>{
                   Text(
                     widget.title,
                     style: TextStyle(
-                      color: _colors.uiBlack,
+                      fontWeight: FontWeight.w900,
+                      color: _colors.uiYellow,
                       fontSize: 36,
                     ),
                   ),
-                  GestureDetector(
+                  /*GestureDetector(
                     onTap: () {},
                     child: Text(
                       'View All',
                       style: TextStyle(
-                          color: _colors.uiGrey,
+                          color: _colors.defaultWhite,
                           fontSize: 20,
-                          fontWeight: FontWeight.w100),
+                          fontWeight: FontWeight.w600),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -83,14 +84,14 @@ class _CategoryListState extends State<CategoryList>{
                           child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(0),
-                                    topLeft: Radius.circular(0),
+                                    topRight: Radius.circular(5),
+                                    topLeft: Radius.circular(5),
                                     bottomLeft: Radius.circular(20),
                                     bottomRight: Radius.circular(20)),
-                                color: _colors.defaultWhite,
+                                color: _colors.uiYellowIconBack,
                                 boxShadow: [
                                   BoxShadow(
-                                      color: Color(0xfff6f6f6),
+                                      color: _colors.uiYellowShadow ,
                                       blurRadius: 0,
                                       offset: Offset(0, 4)),
                                 ]),

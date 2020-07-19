@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:soundoji/Components/LogoTitle.dart';
+import 'package:soundoji/Components/Copyright.dart';
+import 'package:soundoji/Components/SoundojiLogo.dart';
 import 'package:soundoji/Constants/UIColors.dart';
 
 class AboutPage extends StatelessWidget {
@@ -9,51 +10,90 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: _colors.uiYellow,
+      backgroundColor: _colors.defaultWhite,
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          color: _colors.uiYellow,
           child: Row(
             children: [
-              IconButton(
-                icon: Icon(Icons.arrow_back, color: _colors.defaultWhite,size: 40,),
-                onPressed: ()=>  Navigator.pop(context)
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: IconButton(
+                    icon: Icon(
+                      Icons.keyboard_arrow_left,
+                      color: _colors.defaultWhite,
+                      size: 40,
+                    ),
+                    onPressed: () => Navigator.pop(context)),
               ),
             ],
           ),
         ),
-        Flexible(
-          flex: 1,
-          child: Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.7,
-              height: MediaQuery.of(context).size.width * 0.7,
-              decoration: BoxDecoration(
-                  color: _colors.defaultWhite,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Color(0xfff6f6f6),
-                        blurRadius: 0,
-                        offset: Offset(0, 8)),
-                  ]),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    LogoTitle(
-                      colors: _colors,
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height - 100,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                flex: 6,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: _colors.uiYellow,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(0),
+                          topLeft: Radius.circular(0),
+                          bottomLeft: Radius.circular(50),
+                          bottomRight: Radius.circular(50)),
+                      boxShadow: [
+                        BoxShadow(
+                            color:_colors.uiYellowShadow,
+                            blurRadius: 0,
+                            offset: Offset(0, 5)),
+                      ]),
+                  child: Card(
+                    elevation: 0,
+                    color: _colors.uiYellow,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(0),
+                          topLeft: Radius.circular(0),
+                          bottomLeft: Radius.circular(50),
+                          bottomRight: Radius.circular(50)),
                     ),
-                    Text(
-                      'Bu uygulama komik sesleri bir araya getirerek, insanlara güzen anlar yaşatmak için üretildi. Bununla birlikte çocuklarınıza hayvanları sesleri ile öğrenme şansı tanıyor.',
-                      style: TextStyle(fontSize: 25, height: 1.2),
+                    margin: EdgeInsets.all(0),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20.0,5,20,10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SoundojiLogo(colors: _colors,width: 150,),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since rinit to make a type specimen book.',
+                            overflow: TextOverflow.fade,
+                            textScaleFactor: 0.9,
+                            maxLines: 8,
+                            softWrap: true,
+                            style: TextStyle(
+                                fontSize: 26,
+                                color: _colors.defaultWhite,
+                                height: 1.1,
+                                fontWeight: FontWeight.w900),
+                          ),
+                        ],
+                      ),
                     ),
-                    Text('Created By tiqdesign'),
-                  ],
+                  ),
                 ),
               ),
-            ),
+              Flexible(
+                  flex: 1,
+                      child: Center(child: Copyright(colors: _colors))),
+            ],
           ),
         ),
       ]),

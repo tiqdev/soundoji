@@ -14,7 +14,7 @@ class LogoTitle extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Soundoj', style: TextStyle(fontSize: 36, color: _colors.uiYellow ),),
+        Text('Soundoj', style: TextStyle(fontSize: 36, color: _colors.uiYellow, fontFamily: 'Bangers'),),
         Transform.translate(
             offset: Offset(-5,0),
             child: Icon(Icons.music_note, size:30, color: _colors.uiYellow,)),
