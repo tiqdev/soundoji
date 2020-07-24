@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:soundoji/Constants/UIColors.dart';
 import 'package:soundoji/Models/SoundojiObj.dart';
 
@@ -99,7 +98,7 @@ class _CategoryListState extends State<CategoryList>{
                               padding: const EdgeInsets.all(12.0),
                               child: Container(
                                 color: Colors.transparent,
-                                child: SvgPicture.asset(
+                                child: Image.asset(
                                     widget.list[index].iconPath),
                               ),
                             ),

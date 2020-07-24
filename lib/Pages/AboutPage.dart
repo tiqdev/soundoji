@@ -1,9 +1,21 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soundoji/Components/Copyright.dart';
 import 'package:soundoji/Components/SoundojiLogo.dart';
 import 'package:soundoji/Constants/UIColors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
+
+
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   uiColors _colors = new uiColors();
 
   @override
@@ -16,6 +28,8 @@ class AboutPage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           color: _colors.uiYellow,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -26,6 +40,13 @@ class AboutPage extends StatelessWidget {
                       size: 40,
                     ),
                     onPressed: () => Navigator.pop(context)),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8.0,12.0,20.0,8.0),
+                child: InkWell(
+                    child: Image.asset('assets/images/contact.png',width: 40,),
+                    onTap: () => _launchURL('mailto:tariqkaya24@gmail.com?subject=Soundoji&')
+                ),
               ),
             ],
           ),
@@ -68,13 +89,17 @@ class AboutPage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SoundojiLogo(colors: _colors,width: 150,),
+                          SoundojiLogo(colors: _colors,width: 120,),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
-                          Text(
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since rinit to make a type specimen book.',
+                          Text('Soundoji', style: TextStyle(color: _colors.defaultWhite, fontFamily: 'Bangers', fontSize: 32),),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text('Soundoji is a funny and educational mobile application that contains instructive sounds for children. In this application, you can hear the sounds and have fun by touching the emojis. \n\n Completely Free and Offline!',
                             overflow: TextOverflow.fade,
+                            textAlign: TextAlign.center,
                             textScaleFactor: 0.9,
                             maxLines: 8,
                             softWrap: true,

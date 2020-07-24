@@ -5,9 +5,10 @@ INJECTED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:1:1-4
 INJECTED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:1:1-47:12
 INJECTED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [:audioplayers] D:\Project\soundoji\build\audioplayers\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:flutter_statusbarcolor] D:\Project\soundoji\build\flutter_statusbarcolor\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] D:\Project\soundoji\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_statusbarcolor] D:\Project\soundoji\build\flutter_statusbarcolor\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\412798c5ff5129715d71e58ff213e3a7\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\36b6b089b86a4b53f161d1de646d1e60\activity-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\2b55f4dd1ddfb477bff2667016cc0a25\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -40,6 +41,8 @@ INJECTED from D:\Project\soundoji\android\app\src\debug\AndroidManifest.xml:1:1-
 		ADDED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:1:11-69
 application
 ADDED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:8:5-46:19
+MERGED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\6b399c2363bb098ebde1725d903cbda0\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\6b399c2363bb098ebde1725d903cbda0\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\0bf15744f5224b117e4e3c989895e24a\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -98,12 +101,14 @@ uses-sdk
 INJECTED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml
 INJECTED from D:\Project\soundoji\android\app\src\main\AndroidManifest.xml
+MERGED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:audioplayers] D:\Project\soundoji\build\audioplayers\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-44
 MERGED from [:audioplayers] D:\Project\soundoji\build\audioplayers\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-44
-MERGED from [:flutter_statusbarcolor] D:\Project\soundoji\build\flutter_statusbarcolor\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_statusbarcolor] D:\Project\soundoji\build\flutter_statusbarcolor\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] D:\Project\soundoji\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] D:\Project\soundoji\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_statusbarcolor] D:\Project\soundoji\build\flutter_statusbarcolor\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_statusbarcolor] D:\Project\soundoji\build\flutter_statusbarcolor\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\412798c5ff5129715d71e58ff213e3a7\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\412798c5ff5129715d71e58ff213e3a7\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\tar24\.gradle\caches\transforms-2\files-2.1\36b6b089b86a4b53f161d1de646d1e60\activity-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -142,3 +147,11 @@ uses-permission#android.permission.INTERNET
 ADDED from D:\Project\soundoji\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from D:\Project\soundoji\android\app\src\debug\AndroidManifest.xml:6:22-64
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74

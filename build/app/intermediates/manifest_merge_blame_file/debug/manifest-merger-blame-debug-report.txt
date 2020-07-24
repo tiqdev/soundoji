@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-9        android:targetSdkVersion="28" />
+9        android:targetSdkVersion="29" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
@@ -94,6 +94,15 @@
 67-->D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:44:13-44
 68            android:value="2" />
 68-->D:\Project\soundoji\android\app\src\main\AndroidManifest.xml:45:13-30
-69    </application>
-70
-71</manifest>
+69
+70        <activity
+70-->[:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+71            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+71-->[:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+72            android:exported="false"
+72-->[:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+73            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+73-->[:url_launcher] D:\Project\soundoji\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+74    </application>
+75
+76</manifest>

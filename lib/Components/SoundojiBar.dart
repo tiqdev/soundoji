@@ -46,18 +46,14 @@ class SoundojiBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   LogoTitle(colors: _colors),
                   Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: IconButton(
-                      onPressed: (){
+                    padding: const EdgeInsets.only(right: 12.0),
+                    child: InkWell(
+                      onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => AboutPage(),),
                         );
                       },
-                      icon: Icon(
-                        Icons.announcement,
-                        size: 30,
-                        color: _colors.uiYellow,
-                      ),
+                      child: Image.asset('assets/images/about.png',width: 45,)
                     ),
                   ),
                 ],
