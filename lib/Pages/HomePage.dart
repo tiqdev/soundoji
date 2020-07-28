@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       case 'Vehicles':
         audioCache.play(vehiclesList[index].soundPath);
         break;
-      case 'Special':
+      case 'CenkErdem':
         audioCache.play(cenkErdemList[index].soundPath);
         break;
     }
